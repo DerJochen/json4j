@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>de.jochor.lib.json</groupId>
+	<artifactId>json4j-jackson</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- Type T -->
+
+	<parent>
+		<groupId>de.jochor.maven</groupId>
+		<artifactId>super-pom</artifactId>
+		<version>0.2.0</version>
+	</parent>
+
+	<properties>
+		<version.json4j>0.0.1-SNAPSHOT</version.json4j>
+		<version.jackson>2.6.1</version.jackson>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>de.jochor.lib.json</groupId>
+			<artifactId>json4j</artifactId>
+			<version>${version.json4j}</version>
+			<!-- Type 0 -->
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${version.jackson}</version>
+			<!-- Type T -->
+		</dependency>
+
+		<!-- Test Dependencies -->
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<!-- Type 0 -->
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>maven2-repository.jochor.de</id>
+			<url>http://maven.jochor.de/content/repositories/releases/</url>
+		</repository>
+	</repositories>
+
+</project>
