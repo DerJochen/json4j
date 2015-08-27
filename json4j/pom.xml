@@ -12,20 +12,43 @@
 		<artifactId>super-pom</artifactId>
 		<version>0.2.0</version>
 	</parent>
-	
+
+	<properties>
+		<version.service-builder>0.0.1-SNAPSHOT</version.service-builder>
+	</properties>
+
 	<dependencies>
-		<!-- no compile time Dependencies -->
+		<dependency>
+			<groupId>de.jochor.lib.builder</groupId>
+			<artifactId>service-builder</artifactId>
+			<version>${version.service-builder}</version>
+			<!-- Type 0 -->
+		</dependency>
 
 		<!-- Test Dependencies -->
-		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
 			<!-- Type 0 -->
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- No compile time Dependencies -->
+
+			<!-- Test dependencies -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.12</version>
+				<!-- Type 0 -->
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<repositories>
 		<repository>

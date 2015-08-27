@@ -1,38 +1,28 @@
 package de.jochor.lib.json;
 
+import de.jochor.lib.servicebuilder.ServiceBuilder;
+
 /**
  *
  * @author Jochen Hormes
  * @start 2015-08-26
  *
  */
-public class JSONBindingServiceBuilder {
+public class JSONBindingServiceBuilder extends ServiceBuilder {
 
-	// TODO find with classpath scanner
-	private static final String BINDING_SERVICE_CLASS_NAME = "de.jochor.lib.json.gson.JSONBindingServiceGson";
+	public static final String CLASS_NAME_PROPERTY = "jochor.json.class-name";
 
-	private static Class<? extends JSONBindingService> bindingServiceClass;
+	private static final Class<JSONBindingService> SERVICE_TYPE = JSONBindingService.class;
+
+	private static Class<? extends JSONBindingService> serviceClass;
 
 	static {
-		try {
-			ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-			bindingServiceClass = classLoader.loadClass(BINDING_SERVICE_CLASS_NAME).asSubclass(JSONBindingService.class);
-		} catch (ClassNotFoundException e) {
-			System.out.println("Unable to find " + JSONBindingService.class.getSimpleName() + " implementation");
-			// TODO throw new RuntimeException(e);
-		}
+		serviceClass = findImplementation(SERVICE_TYPE, CLASS_NAME_PROPERTY);
 	}
 
 	public static JSONBindingService create() {
-		if (bindingServiceClass == null) {
-			throw new IllegalStateException("No service class set");
-		}
-		try {
-			JSONBindingService jsonBindingService = bindingServiceClass.newInstance();
-			return jsonBindingService;
-		} catch (InstantiationException | IllegalAccessException e) {
-			throw new RuntimeException(e);
-		}
+		JSONBindingService jsonBindingService = create(serviceClass);
+		return jsonBindingService;
 	}
 
 }
