@@ -16,6 +16,7 @@
 	<properties>
 		<version.json4j>0.0.1-SNAPSHOT</version.json4j>
 		<version.gson>2.3.1</version.gson>
+		<version.junit>4.12</version.junit>
 	</properties>
 	
 	<dependencies>
@@ -38,11 +39,21 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
 			<!-- Type 0 -->
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${version.junit}</version>
+				<!-- Type T -->
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<repositories>
 		<repository>
