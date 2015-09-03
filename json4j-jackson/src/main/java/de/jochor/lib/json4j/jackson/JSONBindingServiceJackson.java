@@ -1,9 +1,9 @@
-package de.jochor.lib.json.jackson;
+package de.jochor.lib.json4j.jackson;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import de.jochor.lib.json.JSONBindingService;
+import de.jochor.lib.json4j.JSONBindingService;
 
 /**
  *

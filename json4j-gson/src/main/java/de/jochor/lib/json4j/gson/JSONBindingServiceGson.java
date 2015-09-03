@@ -1,8 +1,8 @@
-package de.jochor.lib.json.gson;
+package de.jochor.lib.json4j.gson;
 
 import com.google.gson.Gson;
 
-import de.jochor.lib.json.JSONBindingService;
+import de.jochor.lib.json4j.JSONBindingService;
 
 /**
  *

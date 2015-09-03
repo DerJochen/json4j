@@ -1,4 +1,4 @@
-package de.jochor.lib.json;
+package de.jochor.lib.json4j;
 
 /**
  *
