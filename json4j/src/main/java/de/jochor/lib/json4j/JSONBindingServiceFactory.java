@@ -19,8 +19,8 @@ public class JSONBindingServiceFactory extends ServiceFactory {
 	 * @return Service instance
 	 */
 	public static JSONBindingService create() {
-		JSONBindingService httpClient = create(BINDER_NAME);
-		return httpClient;
+		JSONBindingService jsonBindingService = create(BINDER_NAME);
+		return jsonBindingService;
 	}
 
 }
