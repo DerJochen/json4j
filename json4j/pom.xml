@@ -2,30 +2,29 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>de.jochor.lib.json</groupId>
 	<artifactId>json4j</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<!-- Type 0 -->
 
 	<parent>
-		<groupId>de.jochor.maven</groupId>
-		<artifactId>super-pom</artifactId>
-		<version>0.2.0</version>
+		<groupId>de.jochor.lib.json</groupId>
+		<artifactId>json4j-pom</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<properties>
-		<version.service-builder>0.0.1-SNAPSHOT</version.service-builder>
+		<version.service-factory>0.0.1-SNAPSHOT</version.service-factory>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>de.jochor.lib.builder</groupId>
-			<artifactId>service-builder</artifactId>
-			<version>${version.service-builder}</version>
+			<groupId>de.jochor.lib.servicefactory</groupId>
+			<artifactId>service-factory</artifactId>
+			<version>${version.service-factory}</version>
 			<!-- Type 0 -->
 		</dependency>
 
-		<!-- Test Dependencies -->
+		<!-- No Test Dependencies -->
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -34,27 +33,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<dependencyManagement>
-		<dependencies>
-			<!-- No compile time Dependencies -->
-
-			<!-- Test dependencies -->
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.12</version>
-				<!-- Type 0 -->
-				<scope>test</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
-	<repositories>
-		<repository>
-			<id>maven2-repository.jochor.de</id>
-			<url>http://maven.jochor.de/content/repositories/releases/</url>
-		</repository>
-	</repositories>
 
 </project>

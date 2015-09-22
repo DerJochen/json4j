@@ -1,6 +1,6 @@
 package de.jochor.lib.json4j;
 
-import de.jochor.lib.servicebuilder.ServiceFactory;
+import de.jochor.lib.servicefactory.ServiceFactory;
 
 /**
  * Factory for JSON Binding Service adapters. Use the static {@link #create()} method to retrieve an instance.

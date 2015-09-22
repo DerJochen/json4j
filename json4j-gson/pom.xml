@@ -2,21 +2,19 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>de.jochor.lib.json</groupId>
 	<artifactId>json4j-gson</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<!-- Type T -->
 
 	<parent>
-		<groupId>de.jochor.maven</groupId>
-		<artifactId>super-pom</artifactId>
-		<version>0.2.0</version>
+		<groupId>de.jochor.lib.json</groupId>
+		<artifactId>json4j-pom</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<properties>
 		<version.json4j>0.0.1-SNAPSHOT</version.json4j>
 		<version.gson>2.3.1</version.gson>
-		<version.junit>4.12</version.junit>
 	</properties>
 	
 	<dependencies>
@@ -43,23 +41,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>${version.junit}</version>
-				<!-- Type T -->
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
-	<repositories>
-		<repository>
-			<id>maven2-repository.jochor.de</id>
-			<url>http://maven.jochor.de/content/repositories/releases/</url>
-		</repository>
-	</repositories>
 
 </project>
