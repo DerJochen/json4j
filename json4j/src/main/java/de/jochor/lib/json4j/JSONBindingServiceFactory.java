@@ -5,8 +5,10 @@ import de.jochor.lib.servicefactory.ServiceFactory;
 /**
  * Factory for JSON Binding Service adapters. Use the static {@link #create()} method to retrieve an instance.
  * 
+ * <p>
+ * <b>Started:</b> 2015-08-26
+ * </p>
  * @author Jochen Hormes
- * @start 2015-08-26
  *
  */
 public class JSONBindingServiceFactory extends ServiceFactory {
@@ -15,7 +17,7 @@ public class JSONBindingServiceFactory extends ServiceFactory {
 
 	/**
 	 * Factory method to produce a new instance of a JSON Binding Service adapter.
-	 * 
+	 *
 	 * @return Service instance
 	 */
 	public static JSONBindingService create() {

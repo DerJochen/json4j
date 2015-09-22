@@ -16,7 +16,7 @@
 		<version.json4j>0.0.1-SNAPSHOT</version.json4j>
 		<version.gson>2.3.1</version.gson>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>de.jochor.lib.json</groupId>
@@ -33,7 +33,7 @@
 		</dependency>
 
 		<!-- Test Dependencies -->
-		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
