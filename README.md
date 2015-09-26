@@ -16,7 +16,7 @@ Since this project is currently intended for my *java-lib-for-wunderlist* projec
 
 The field initialization looks like this:
 
-```
+```java
 private JSONBindingService jsonBindingService = JSONBindingServiceFactory.create();
 ```
 
@@ -27,21 +27,30 @@ During compile time this code is perfectly fine. When running the program a conc
 ###Dependency Tag###
 
 ####Facade project####
+
+```xml
 <dependency>
 	<groupId>de.jochor.lib.json</groupId>
 	<artifactId>json4j</artifactId>
 	<version>0.1.0</version>
 </dependency>
+```
 
 ####Adapter implementation for GSON####
+
+```xml
 <dependency>
 	<groupId>de.jochor.lib.json</groupId>
 	<artifactId>json4j-gson</artifactId>
 	<version>0.1.0</version>
 </dependency>
+```
 
 ###Repository Tag###
+
+```xml
 <repository>
 	<id>jochor-public-releases</id>
 	<url>http://maven.jochor.de/content/repositories/public-releases/</url>
 </repository>
+```
