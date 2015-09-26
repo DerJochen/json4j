@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>json4j</artifactId>
+	<artifactId>json4j-tests</artifactId>
 	<!-- Type 0 -->
 
 	<parent>
@@ -14,14 +14,30 @@
 
 	<properties>
 		<version.service-factory>0.0.1-SNAPSHOT</version.service-factory>
+		<version.lombok>1.16.4</version.lombok>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>de.jochor.lib.servicefactory</groupId>
-			<artifactId>service-factory</artifactId>
-			<version>${version.service-factory}</version>
+			<groupId>de.jochor.lib.json</groupId>
+			<artifactId>json4j</artifactId>
+			<version>${project.version}</version>
 			<!-- Type 0 -->
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<!-- Type 0 -->
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${version.lombok}</version>
+			<!-- Type 0 -->
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- No Test Dependencies -->

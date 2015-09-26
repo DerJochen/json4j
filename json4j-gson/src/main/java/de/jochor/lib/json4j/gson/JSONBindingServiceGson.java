@@ -5,10 +5,12 @@ import com.google.gson.Gson;
 import de.jochor.lib.json4j.JSONBindingService;
 
 /**
+ * json4j adapter implementation for GSON.
  *
  * <p>
  * <b>Started:</b> 2015-08-24
  * </p>
+ * 
  * @author Jochen Hormes
  *
  */

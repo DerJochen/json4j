@@ -6,10 +6,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import de.jochor.lib.json4j.JSONBindingService;
 
 /**
+ * json4j adapter implementation for Jackson.
  *
  * <p>
  * <b>Started:</b> 2015-08-24
  * </p>
+ * 
  * @author Jochen Hormes
  *
  */

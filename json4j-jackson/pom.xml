@@ -40,6 +40,13 @@
 			<!-- Type 0 -->
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>de.jochor.lib.json</groupId>
+			<artifactId>json4j-tests</artifactId>
+			<!-- Type 0 -->
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 </project>
