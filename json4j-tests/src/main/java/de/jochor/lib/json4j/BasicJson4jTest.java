@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import de.jochor.lib.json4j.testmodel.EmptyEntity;
@@ -23,6 +24,11 @@ import de.jochor.lib.json4j.testmodel.SimpleEntity;
 public class BasicJson4jTest {
 
 	private JSONBindingService jsonBindingService;
+
+	@BeforeClass
+	public static void setUpBeforeClass() {
+		System.setProperty("jochor.servicefactory.silence", "true");
+	}
 
 	@Before
 	public void setUp() throws Exception {

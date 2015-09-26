@@ -8,12 +8,12 @@
 	<parent>
 		<groupId>de.jochor.lib.json</groupId>
 		<artifactId>json4j-pom</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.1.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<properties>
-		<version.service-factory>0.0.1-SNAPSHOT</version.service-factory>
+		<version.service-factory>0.1.0</version.service-factory>
 	</properties>
 
 	<dependencies>
