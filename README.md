@@ -16,9 +16,9 @@ Since this project is currently intended for my *java-lib-for-wunderlist* projec
 
 The field initialization looks like this:
 
-...
+```
 private JSONBindingService jsonBindingService = JSONBindingServiceFactory.create();
-...
+```
 
 During compile time this code is perfectly fine. When running the program a concrete implementation of the `JSONBindingService` interface is needed. For that you additionally depend on an adapter implementation (e.g. *json4j-gson*). In you library project you do not want to have a *compile* dependency to an adapter implementation, but with a *test* dependency you actually can run and test your code.
 
