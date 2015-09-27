@@ -20,7 +20,7 @@
 		<module>json4j</module>
 
 		<module>json4j-gson</module>
-		<!-- <module>json4j-jackson</module> disabled, does not work as expected -->
+		<module>json4j-jackson</module>
 
 		<module>json4j-tests</module>
 	</modules>

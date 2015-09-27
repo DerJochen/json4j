@@ -36,7 +36,7 @@ During compile time this code is perfectly fine. When running the program a conc
 </dependency>
 ```
 
-#### Adapter implementation for GSON
+#### Adapter implementation for GSON v2.3.1
 
 ```xml
 <dependency>
@@ -46,11 +46,32 @@ During compile time this code is perfectly fine. When running the program a conc
 </dependency>
 ```
 
+#### Adapter implementation for Jackson v2.6.1
+
+```xml
+<dependency>
+	<groupId>de.jochor.lib.json</groupId>
+	<artifactId>json4j-gson</artifactId>
+	<version>0.1.1-SNAPSHOT</version>
+</dependency>
+```
+
 ### Repository Tag
+
+#### Releases
 
 ```xml
 <repository>
 	<id>jochor-public-releases</id>
 	<url>http://maven.jochor.de/content/repositories/public-releases/</url>
+</repository>
+```
+
+#### Snapshots
+
+```xml
+<repository>
+	<id>jochor-public-releases</id>
+	<url>http://maven.jochor.de/content/repositories/public-snapshots/</url>
 </repository>
 ```

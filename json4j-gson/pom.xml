@@ -13,7 +13,7 @@
 	</parent>
 
 	<properties>
-		<version.json4j>0.0.1-SNAPSHOT</version.json4j>
+		<version.json4j>0.1.1-SNAPSHOT</version.json4j>
 		<version.gson>2.3.1</version.gson>
 	</properties>
 
