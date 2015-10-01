@@ -14,6 +14,7 @@
 		<groupId>de.jochor.maven</groupId>
 		<artifactId>public-super-pom</artifactId>
 		<version>0.1.0</version>
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<modules>
