@@ -24,7 +24,14 @@
 			<!-- Type 0 -->
 		</dependency>
 
-		<!-- No Test Dependencies -->
+		<!-- Test Dependencies -->
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<!-- Type 0 -->
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
 
