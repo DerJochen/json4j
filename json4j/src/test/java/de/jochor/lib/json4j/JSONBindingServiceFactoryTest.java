@@ -1,6 +1,7 @@
 package de.jochor.lib.json4j;
 
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
@@ -12,6 +13,11 @@ import org.junit.Test;
  *
  */
 public class JSONBindingServiceFactoryTest {
+
+	@BeforeClass
+	public static void setUpBeforeClass() {
+		System.setProperty("jochor.servicefactory.silence", "true");
+	}
 
 	@Test
 	public void testCreate() {

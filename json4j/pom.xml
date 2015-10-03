@@ -32,7 +32,6 @@
 			<!-- Type 0 -->
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 
 	<build>
