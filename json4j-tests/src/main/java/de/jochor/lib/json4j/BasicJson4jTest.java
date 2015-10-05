@@ -27,6 +27,7 @@ public class BasicJson4jTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() {
+		// Switch off outputs from the service factory
 		System.setProperty("jochor.servicefactory.silence", "true");
 	}
 
