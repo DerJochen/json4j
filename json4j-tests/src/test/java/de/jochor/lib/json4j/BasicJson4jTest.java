@@ -21,7 +21,7 @@ import de.jochor.lib.json4j.testmodel.SimpleEntity;
  * @author Jochen Hormes
  *
  */
-public class BasicJson4jTest {
+public abstract class BasicJson4jTest {
 
 	private JSONBindingService jsonBindingService;
 
