@@ -10,6 +10,7 @@ import org.junit.Test;
 
 import de.jochor.lib.json4j.testmodel.EmptyEntity;
 import de.jochor.lib.json4j.testmodel.SimpleEntity;
+import de.jochor.lib.servicefactory.ServiceFactory;
 
 /**
  * Test for JSON Binding Service adapter implementations.
@@ -28,7 +29,7 @@ public class BasicJson4jTest {
 	@BeforeClass
 	public static void setUpBeforeClass() {
 		// Switch off outputs from the service factory
-		System.setProperty("jochor.servicefactory.silence", "true");
+		System.setProperty(ServiceFactory.SILENT_MODE, "true");
 	}
 
 	@Before
