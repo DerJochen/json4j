@@ -22,7 +22,7 @@ import de.jochor.lib.servicefactory.ServiceFactory;
  * @author Jochen Hormes
  *
  */
-public class BasicJson4jTest {
+public abstract class BasicJson4jTest {
 
 	private JSONBindingService jsonBindingService;
 

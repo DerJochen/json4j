@@ -44,7 +44,9 @@
 		<dependency>
 			<groupId>de.jochor.lib.json</groupId>
 			<artifactId>json4j-tests</artifactId>
+			<version>${version.json4j}</version>
 			<!-- Type 0 -->
+			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
