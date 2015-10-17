@@ -4,7 +4,7 @@
 
 	<groupId>de.jochor.lib.json</groupId>
 	<artifactId>json4j-pom</artifactId>
-	<version>0.2.0</version>
+	<version>0.2.1</version>
 	<packaging>pom</packaging>
 	<!-- Type 0 -->
 	<name>json4j</name>
@@ -35,18 +35,11 @@
 			<!-- No compile time Dependencies -->
 
 			<!-- Test dependencies -->
+
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>${version.junit}</version>
-				<!-- Type 0 -->
-				<scope>test</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>de.jochor.lib.json</groupId>
-				<artifactId>json4j-tests</artifactId>
-				<version>${project.version}</version>
 				<!-- Type 0 -->
 				<scope>test</scope>
 			</dependency>

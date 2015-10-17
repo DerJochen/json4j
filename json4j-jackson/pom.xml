@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>de.jochor.lib.json</groupId>
 		<artifactId>json4j-pom</artifactId>
-		<version>0.2.0</version>
+		<version>0.2.1</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
@@ -44,7 +44,9 @@
 		<dependency>
 			<groupId>de.jochor.lib.json</groupId>
 			<artifactId>json4j-tests</artifactId>
+			<version>${version.json4j}</version>
 			<!-- Type 0 -->
+			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
