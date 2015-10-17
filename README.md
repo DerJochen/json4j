@@ -32,7 +32,7 @@ During compile time this code is perfectly fine. When running the program a conc
 <dependency>
 	<groupId>de.jochor.lib.json</groupId>
 	<artifactId>json4j</artifactId>
-	<version>0.2.0</version>
+	<version>0.2.1</version>
 </dependency>
 ```
 
@@ -42,7 +42,7 @@ During compile time this code is perfectly fine. When running the program a conc
 <dependency>
 	<groupId>de.jochor.lib.json</groupId>
 	<artifactId>json4j-gson</artifactId>
-	<version>0.2.0</version>
+	<version>0.2.1</version>
 </dependency>
 ```
 
@@ -52,7 +52,7 @@ During compile time this code is perfectly fine. When running the program a conc
 <dependency>
 	<groupId>de.jochor.lib.json</groupId>
 	<artifactId>json4j-gson</artifactId>
-	<version>0.2.0</version>
+	<version>0.2.1</version>
 </dependency>
 ```
 
