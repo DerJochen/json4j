@@ -4,7 +4,7 @@
 
 	<groupId>de.jochor.lib.json</groupId>
 	<artifactId>json4j-pom</artifactId>
-	<version>0.3.0</version>
+	<version>0.3.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<!-- Type 0 -->
 	<name>json4j-parent</name>
