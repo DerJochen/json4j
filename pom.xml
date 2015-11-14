@@ -4,10 +4,10 @@
 
 	<groupId>de.jochor.lib.json</groupId>
 	<artifactId>json4j-pom</artifactId>
-	<version>0.2.2-SNAPSHOT</version>
+	<version>0.3.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<!-- Type 0 -->
-	<name>json4j</name>
+	<name>json4j-parent</name>
 	<description>Parent pom of the json4j project. Type 0 project.</description>
 
 	<parent>

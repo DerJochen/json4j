@@ -19,4 +19,8 @@ public class StaticJSONBindingBinder {
 		return jsonBindingService;
 	}
 
+	public static String getImplName() {
+		return JSONBindingServiceGson.class.getName();
+	}
+
 }
