@@ -2,8 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>json4j-gson</artifactId>
-	<!-- Type T -->
+	<artifactId>json4j-multi-resource-test</artifactId>
+	<!-- Type 0 -->
 
 	<parent>
 		<groupId>de.jochor.lib.json</groupId>
@@ -12,42 +12,32 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<properties>
-		<version.json4j>${project.version}</version.json4j>
-		<version.gson>2.3.1</version.gson>
-	</properties>
-
 	<dependencies>
-		<dependency>
-			<groupId>de.jochor.lib.json</groupId>
-			<artifactId>json4j</artifactId>
-			<version>${version.json4j}</version>
-			<!-- Type 0 -->
-		</dependency>
 
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>${version.gson}</version>
-			<!-- Type T -->
-		</dependency>
+		<!-- No compile time Dependencies -->
 
 		<!-- Test Dependencies -->
+
+		<dependency>
+			<groupId>de.jochor.lib.json</groupId>
+			<artifactId>json4j-gson</artifactId>
+			<version>${project.version}</version>
+			<!-- Type 0 -->
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>de.jochor.lib.json</groupId>
+			<artifactId>json4j-jackson</artifactId>
+			<version>${project.version}</version>
+			<!-- Type 0 -->
+			<scope>test</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<!-- Type 0 -->
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>de.jochor.lib.json</groupId>
-			<artifactId>json4j-tests</artifactId>
-			<version>${version.json4j}</version>
-			<!-- Type 0 -->
-			<type>test-jar</type>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
