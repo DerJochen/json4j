@@ -22,6 +22,14 @@ private JSONBindingService jsonBindingService = JSONBindingServiceFactory.create
 
 During compile time this code is perfectly fine. When running the program a concrete implementation of the `JSONBindingService` interface is needed. For that you additionally depend on an adapter implementation (e.g. *json4j-gson*). In you library project you do not want to have a *compile* dependency to an adapter implementation, but with a *test* dependency you actually can run and test your code.
 
+If you have multiple adapter projects in your classpath you can select a specific one by setting the Java system propert `jochor.servicefactory.de.jochor.lib.json4j.StaticJSONBindingBinder` to the full qualified name of the service class.
+
+```java
+System.setProperty("jochor.servicefactory.de.jochor.lib.json4j.StaticJSONBindingBinder", "de.jochor.lib.json4j.gson.JSONBindingServiceGson");
+```
+
+Normally this is only necessary if you need different implementation during testing and runtime.
+
 ## Maven
 
 ### Dependency Tag
