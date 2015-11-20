@@ -14,6 +14,10 @@ import de.jochor.lib.json4j.gson.JSONBindingServiceGson;
  */
 public class StaticJSONBindingBinder {
 
+	private StaticJSONBindingBinder() {
+		// Intended blank
+	}
+
 	public static JSONBindingService create() {
 		JSONBindingServiceGson jsonBindingService = new JSONBindingServiceGson();
 		return jsonBindingService;

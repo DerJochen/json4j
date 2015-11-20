@@ -16,6 +16,10 @@ public class JSONBindingServiceFactory extends ServiceFactory {
 
 	private static final String BINDER_NAME = "de/jochor/lib/json4j/StaticJSONBindingBinder.class";
 
+	private JSONBindingServiceFactory() {
+		// Intended blank
+	}
+
 	/**
 	 * Factory method to produce a new instance of a JSON Binding Service adapter.
 	 *

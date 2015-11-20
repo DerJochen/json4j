@@ -14,6 +14,10 @@ import de.jochor.lib.json4j.jackson.JSONBindingServiceJackson;
  */
 public class StaticJSONBindingBinder {
 
+	private StaticJSONBindingBinder() {
+		// Intended blank
+	}
+
 	public static JSONBindingService create() {
 		JSONBindingServiceJackson jsonBindingService = new JSONBindingServiceJackson();
 		return jsonBindingService;
