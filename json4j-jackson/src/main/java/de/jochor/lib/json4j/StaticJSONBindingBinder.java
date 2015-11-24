@@ -18,11 +18,21 @@ public class StaticJSONBindingBinder {
 		// Intended blank
 	}
 
+	/**
+	 * Factory method to produce a new instance of a {@link JSONBindingServiceJackson}.
+	 *
+	 * @return Service instance
+	 */
 	public static JSONBindingService create() {
 		JSONBindingServiceJackson jsonBindingService = new JSONBindingServiceJackson();
 		return jsonBindingService;
 	}
 
+	/**
+	 * Returns the full qualified name of the service class this binder creates.
+	 *
+	 * @return Name of the service
+	 */
 	public static String getImplName() {
 		return JSONBindingServiceJackson.class.getName();
 	}

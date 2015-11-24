@@ -6,6 +6,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
+import de.jochor.lib.json4j.JSONBindingException;
 import de.jochor.lib.json4j.JSONBindingService;
 
 /**
@@ -22,6 +23,9 @@ public class JSONBindingServiceJackson implements JSONBindingService {
 
 	private final ObjectMapper mapper;
 
+	/**
+	 * Create a new {@link JSONBindingServiceJackson}.
+	 */
 	public JSONBindingServiceJackson() {
 		mapper = new ObjectMapper();
 
@@ -37,7 +41,7 @@ public class JSONBindingServiceJackson implements JSONBindingService {
 		try {
 			entity = mapper.readValue(json, entityType);
 		} catch (IOException e) {
-			throw new RuntimeException(e);
+			throw new JSONBindingException(e);
 		}
 		return entity;
 	}
@@ -51,7 +55,7 @@ public class JSONBindingServiceJackson implements JSONBindingService {
 			String json = mapper.writeValueAsString(entity);
 			return json;
 		} catch (JsonProcessingException e) {
-			throw new RuntimeException(e);
+			throw new JSONBindingException(e);
 		}
 	}
 
