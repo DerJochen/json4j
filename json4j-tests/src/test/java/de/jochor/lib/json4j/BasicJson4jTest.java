@@ -1,5 +1,6 @@
 package de.jochor.lib.json4j;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -9,6 +10,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import de.jochor.lib.json4j.testmodel.EmptyEntity;
+import de.jochor.lib.json4j.testmodel.RecursiveEntity;
 import de.jochor.lib.json4j.testmodel.SimpleEntity;
 import de.jochor.lib.servicefactory.ServiceFactory;
 
@@ -51,6 +53,11 @@ public abstract class BasicJson4jTest {
 		EmptyEntity entity2 = jsonBindingService.toEntity(json, EmptyEntity.class);
 		Assert.assertNotNull(entity2);
 		// No fields to check
+	}
+
+	@Test(expected = JSONBindingException.class)
+	public void testEmptyEntity_unknownAttribute() {
+		jsonBindingService.toEntity("{\"x\"=3}", EmptyEntity.class);
 	}
 
 	@Test
@@ -97,6 +104,21 @@ public abstract class BasicJson4jTest {
 		assertEquals(entityArray[0], entityArray2[0]);
 		Assert.assertNull(entityArray2[1]);
 		assertEquals(entityArray[2], entityArray2[2]);
+	}
+
+	@Test(expected = JSONBindingException.class)
+	public void testRecursiveEntity() {
+		RecursiveEntity entity = new RecursiveEntity();
+		jsonBindingService.toJSON(entity);
+	}
+
+	@Test
+	public void testGetImplName() throws Exception {
+		Class<?> loadedClass = Thread.currentThread().getContextClassLoader().loadClass("de.jochor.lib.json4j.StaticJSONBindingBinder");
+		Method method = loadedClass.getMethod("getImplName");
+		Object value = method.invoke(null);
+		Assert.assertNotNull(value);
+		Assert.assertTrue(value instanceof String);
 	}
 
 	protected SimpleEntity createSimpleEntity(int id, long version, String name, int strangely_named, ArrayList<String> expectedParts) {

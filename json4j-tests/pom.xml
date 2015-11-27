@@ -22,13 +22,13 @@
 			<artifactId>json4j</artifactId>
 			<version>${project.version}</version>
 			<!-- Type 0 -->
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<!-- Type 0 -->
-			<scope>compile</scope>
 		</dependency>
 
 		<dependency>

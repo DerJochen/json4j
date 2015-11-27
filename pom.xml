@@ -20,7 +20,8 @@
 	<modules>
 		<module>json4j</module>
 
-		<module>json4j-gson</module>
+		<!--  GSON just ignores unknown Attributes and recursion. In both cases there should be an error. -->
+		<!-- <module>json4j-gson</module> -->
 		<module>json4j-jackson</module>
 
 		<module>json4j-tests</module>
