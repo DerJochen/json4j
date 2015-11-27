@@ -112,6 +112,11 @@ public abstract class BasicJson4jTest {
 		jsonBindingService.toJSON(entity);
 	}
 
+	@Test(expected = JSONBindingException.class)
+	public void testInvalidJSON() {
+		jsonBindingService.toEntity("{", EmptyEntity.class);
+	}
+
 	@Test
 	public void testGetImplName() throws Exception {
 		Class<?> loadedClass = Thread.currentThread().getContextClassLoader().loadClass("de.jochor.lib.json4j.StaticJSONBindingBinder");
