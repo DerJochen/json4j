@@ -1,7 +1,9 @@
 package de.jochor.lib.json4j.gson;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
+import de.jochor.lib.json4j.JSONBindingException;
 import de.jochor.lib.json4j.JSONBindingService;
 
 /**
@@ -23,8 +25,12 @@ public class JSONBindingServiceGson implements JSONBindingService {
 	 */
 	@Override
 	public <T> T toEntity(String json, Class<T> entityType) {
-		T entity = gson.fromJson(json, entityType);
-		return entity;
+		try {
+			T entity = gson.fromJson(json, entityType);
+			return entity;
+		} catch (JsonSyntaxException e) {
+			throw new JSONBindingException(e);
+		}
 	}
 
 	/**

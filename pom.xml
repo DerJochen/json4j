@@ -4,7 +4,7 @@
 
 	<groupId>de.jochor.lib.json</groupId>
 	<artifactId>json4j-pom</artifactId>
-	<version>0.3.2-SNAPSHOT</version>
+	<version>0.3.2</version>
 	<packaging>pom</packaging>
 	<!-- Type 0 -->
 	<name>json4j-parent</name>
@@ -21,7 +21,7 @@
 		<module>json4j</module>
 
 		<!--  GSON just ignores unknown Attributes and recursion. In both cases there should be an error. -->
-		<!-- <module>json4j-gson</module> -->
+		<module>json4j-gson</module>
 		<module>json4j-jackson</module>
 
 		<module>json4j-tests</module>
